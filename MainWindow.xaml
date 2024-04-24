@@ -1,0 +1,44 @@
+﻿<Window x:Class="Inf04Egzamin.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Inf04Egzamin"
+        mc:Ignorable="d"
+        Title="Wprowadzenie danych do paszportu. Wykonał: 00000000000" Height="300" Width="800" Background="#5f9ea0">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <StackPanel>
+            <DockPanel Margin="40,40,10,10">
+                <TextBlock >Numer</TextBlock>
+                <TextBox x:Name="Numer" Width="150" HorizontalAlignment="Right" LostFocus="Numer_LostFocus"></TextBox>
+            </DockPanel>
+            <DockPanel Margin="40,0,10,10">
+                <TextBlock >Imię</TextBlock>
+                <TextBox x:Name="Imie" Width="150" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+
+            <DockPanel Margin="40,0,10,10">
+                <TextBlock>Nazwisko</TextBlock>
+                <TextBox x:Name="Nazwisko" Width="150" HorizontalAlignment="Right"></TextBox>
+            </DockPanel>
+            <GroupBox Header="Kolor oczu" Margin="40,10,10,10">
+                <StackPanel Margin="10,5,0,10">
+                    <RadioButton x:Name="Niebieskie" Margin="5" IsChecked="True">Niebieskie</RadioButton>
+                    <RadioButton x:Name="Zielone" Margin="5">Zielone</RadioButton>
+                    <RadioButton x:Name="Piwne" Margin="5">Piwne</RadioButton>
+                </StackPanel>
+            </GroupBox>
+        </StackPanel>
+        <StackPanel Grid.Column="1">
+            <StackPanel Orientation="Horizontal" Margin="40,40,0,0">
+                <Image x:Name="zdjecie_twarz" Height="180"></Image>
+                <Image x:Name="zdjecie_palec" Height="180" Margin="60,0,0,0"/>
+            </StackPanel>
+            <Button Width="200" Click="Button_Click">OK</Button>
+        </StackPanel>
+    </Grid>
+</Window>
